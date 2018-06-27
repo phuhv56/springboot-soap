@@ -1,0 +1,100 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://service.payment.com/mps"
+           targetNamespace="http://service.payment.com/mps"
+           elementFormDefault="qualified">
+
+    <xs:element name="doNotify">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="username" type="xs:string"/>
+                <xs:element name="password" type="xs:string"/>
+                <xs:element name="serviceid" type="xs:string"/>
+                <xs:element name="msisdn" type="xs:long"/>
+                <xs:element name="chargetime" type="xs:long"/>
+                <xs:element name="params" type="xs:string"/>
+                <xs:element name="mode" type="xs:string"/>
+                <xs:element name="amount" type="xs:double"/>
+                <xs:element name="command" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="doNotifyResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="contentRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="username" type="xs:string"/>
+                <xs:element name="password" type="xs:string"/>
+                <xs:element name="serviceid" type="xs:string"/>
+                <xs:element name="msisdn" type="xs:long"/>
+                <xs:element name="params" type="xs:string"/>
+                <xs:element name="mode" type="xs:string"/>
+                <xs:element name="amount" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="contentRequestResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="moRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="username" type="xs:string"/>
+                <xs:element name="password" type="xs:string"/>
+                <xs:element name="source" type="xs:long"/>
+                <xs:element name="dest" type="xs:long"/>
+                <xs:element name="content" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="moRequestResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="mpschargeRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cp_request_id" type="xs:long"/>
+                <xs:element name="msisdn" type="xs:long"/>
+                <xs:element name="username" type="xs:string"/>
+                <xs:element name="password" type="xs:string"/>
+                <xs:element name="command" type="xs:string"/>
+                <xs:element name="category" type="xs:string"/>
+                <xs:element name="params" type="xs:string"/>
+                <xs:element name="chargetime" type="xs:long"/>
+                <xs:element name="sub_service" type="xs:string"/>
+                <xs:element name="price" type="xs:long"/>
+                <xs:element name="content" type="xs:string"/>
+                <xs:element name="ip" type="xs:string"/>
+                <xs:element name="data" type="xs:string"/>
+                <xs:element name="opt" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="mpschargeResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
