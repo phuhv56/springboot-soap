@@ -8,13 +8,11 @@
             <xs:sequence>
                 <xs:element name="username" type="xs:string"/>
                 <xs:element name="password" type="xs:string"/>
-                <xs:element name="serviceid" type="xs:string"/>
-                <xs:element name="msisdn" type="xs:long"/>
-                <xs:element name="chargetime" type="xs:long"/>
-                <xs:element name="params" type="xs:string"/>
-                <xs:element name="mode" type="xs:string"/>
-                <xs:element name="amount" type="xs:double"/>
-                <xs:element name="command" type="xs:string"/>
+                <xs:element name="cpRequestId" type="xs:string"/>
+                <xs:element name="mobile" type="xs:long"/>
+                <xs:element name="price" type="xs:long"/>
+                <xs:element name="cmd" type="xs:string"/>
+                <xs:element name="responseCode" type="xs:string"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
